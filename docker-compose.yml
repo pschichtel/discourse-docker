@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   bootstrap-redis:
-    image: 'redis:6'
+    image: 'redis:7'
     networks:
       - discourse
   bootstrap-postgres:
