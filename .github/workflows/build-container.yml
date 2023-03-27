@@ -9,7 +9,7 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build the Docker image
       env:
-        DOCKERHUB_USERNAME: "${{ github.actor }}"
-        DOCKERHUB_PASSWORD: "${{ secrets.GITHUB_TOKEN }}"
+        REGISTRY_USERNAME: "${{ github.actor }}"
+        REGISTRY_PASSWORD: "${{ secrets.GITHUB_TOKEN }}"
       run: |
         ./build.sh
