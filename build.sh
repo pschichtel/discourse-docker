@@ -17,6 +17,7 @@ build_image_name="local_discourse/$config:latest"
 deploy_image_name="ghcr.io/pschichtel/discourse:$version-$(tr _ - <<< "$config")"
 
 docker compose down
+set -x
 docker image tag "$build_image_name" "$deploy_image_name"
 docker image rm "$build_image_name"
 docker image push "$deploy_image_name"
