@@ -14,7 +14,7 @@ docker compose up -d
 
 ./launcher bootstrap "$config" --docker-args "--net=discourse --mount type=tmpfs,destination=/shared --mount type=tmpfs,destination=/var/log"
 build_image_name="local_discourse/$config:latest"
-deploy_image_name="pschichtel/discourse:$version-$config"
+deploy_image_name="ghcr.io/pschichtel/discourse:$version-$config"
 
 docker compose down
 docker image tag "$build_image_name" "$deploy_image_name"
